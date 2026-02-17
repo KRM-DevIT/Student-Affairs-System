@@ -1,0 +1,160 @@
+{
+  "students": [
+    {
+      "name": "ahmed ali",
+      "email": "ahmed@student.com",
+      "department": "science",
+      "age": 23,
+      "enrolled": true,
+      "id": 1
+    },
+    {
+      "name": "sara mohamed",
+      "email": "sara@student.com",
+      "department": "information systems",
+      "age": 22,
+      "enrolled": false,
+      "id": 2
+    },
+    {
+      "name": "rana mohamed",
+      "email": "rani@student.com",
+      "department": "computer systems",
+      "age": 21,
+      "enrolled": true,
+      "id": 4
+    },
+    {
+      "name": "alaa nabil",
+      "email": "alaa@student.com",
+      "department": "communication engineering",
+      "age": 21,
+      "enrolled": true,
+      "id": 5
+    },
+    {
+      "name": "osama ali mohamed",
+      "email": "osama@student.com",
+      "department": "cyber security",
+      "age": 24,
+      "enrolled": false,
+      "id": 7
+    },
+    {
+      "name": "said alaa mohamed",
+      "email": "said@student.com",
+      "department": "devops",
+      "age": 51,
+      "enrolled": false,
+      "id": 8
+    },
+    {
+      "name": "mohamed ali ",
+      "email": "kareemrmdn531@yahoo.com",
+      "department": "windows forms",
+      "age": 25,
+      "enrolled": false,
+      "id": 9
+    },
+    {
+      "name": "samir",
+      "email": "samir@gmail.com",
+      "department": "physics",
+      "age": 29,
+      "enrolled": false,
+      "id": 10
+    },
+    {
+      "name": "amr",
+      "email": "amr@yahoo.com",
+      "department": "computer systems",
+      "age": 39,
+      "enrolled": true,
+      "id": 11
+    },
+    {
+      "name": "ziad",
+      "email": "ziad@zoz.com",
+      "department": "pd",
+      "age": 30,
+      "enrolled": false,
+      "id": 12
+    },
+    {
+      "name": "alaa nabil",
+      "email": "alollkareem@yahoo.com",
+      "department": "science",
+      "age": 22,
+      "enrolled": true,
+      "id": 13
+    },
+    {
+      "name": "sami saeed",
+      "email": "sami@yahoo.com",
+      "department": "pd",
+      "age": 23,
+      "enrolled": true,
+      "id": 14
+    },
+    {
+      "name": "saeed said",
+      "email": "saeed@yahoo.com",
+      "department": "electronics",
+      "age": 29,
+      "enrolled": true,
+      "id": 15
+    },
+    {
+      "name": "john",
+      "email": "john@hotmail.com",
+      "department": "devops",
+      "age": 25,
+      "enrolled": false,
+      "id": 16
+    }
+  ],
+  "courses": [
+    {
+      "name": "introduction to computer science",
+      "coursecode": "cs101",
+      "description": "basic concepts of computer science, including algorithms and programming.",
+      "id": 1
+    },
+    {
+      "name": "data structures and algorithms",
+      "coursecode": "cs201",
+      "description": "learn about common data structures and algorithm design techniques.",
+      "id": 2
+    },
+    {
+      "name": "database systems",
+      "coursecode": "db102",
+      "description": "introduction to relational databases, sql, and database design.",
+      "id": 3
+    },
+    {
+      "name": "web development fundamentals",
+      "coursecode": "wd102",
+      "description": "learn html, css, and javascript to build dynamic web pages.",
+      "id": 4
+    },
+    {
+      "name": "software engineering principles",
+      "coursecode": "se201",
+      "description": "study software development lifecycle, methodologies, and best practices.",
+      "id": 5
+    },
+    {
+      "name": "ai",
+      "coursecode": "ai021",
+      "description": "ai and ml and dl",
+      "id": 6
+    },
+    {
+      "name": "advanced c#",
+      "coursecode": "advc#",
+      "description": "course about c# and how advanced it is ",
+      "id": 7
+    }
+  ]
+}

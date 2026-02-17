@@ -1,0 +1,62 @@
+/students-affairs-system
+│
+├── /css
+│   └── style.css            # Styles for Grid (Table), pagination, and forms [cite: 13, 119]
+│
+├── /src
+│   ├── /models              # OOP Classes defining the data structure 
+│   │   ├── Student.js
+│   │   ├── Course.js
+│   │   ├── Instructor.js
+│   │   └── Employee.js
+│   │
+│   ├── /services            # Logic for API calls, search, sort, and pagination [cite: 110]
+│   │   ├── ApiService.js    # Base class for Fetch API logic [cite: 12, 110]
+│   │   ├── StudentService.js
+│   │   ├── CourseService.js
+│   │   ├── InstructorService.js
+│   │   └── EmployeeService.js
+│   │
+│   ├── /views               # DOM manipulation and rendering logic [cite: 106]
+│   │   ├── BaseView.js      # Shared logic for tables/forms
+│   │   ├── StudentView.js
+│   │   ├── CourseView.js
+│   │   ├── InstructorView.js
+│   │   └── EmployeeView.js
+│   │
+│   ├── /controllers         # Bridges views and services [cite: 111, 120]
+│   │   ├── StudentController.js
+│   │   ├── CourseController.js
+│   │   ├── InstructorController.js
+│   │   └── EmployeeController.js
+│   │
+│   └── main.js              # Entry point to initialize the application [cite: 111]
+│
+├── db.json                  # Mock database for json-server [cite: 11, 123]
+├── index.html               # Main layout and navigation [cite: 119]
+└── package.json             # Scripts to run json-server [cite: 11]
+===================================================================================================================
+
+Models: Define the properties of each entity (e.g., a Student's ID and Name).
+
+
+Services: Handle all fetch() requests. This is where you append ?q=keyword for search, _sort for sorting, and _page for pagination.
+
+
+Views: Responsible for creating the HTML table rows and showing/hiding forms.
+
+
+Controllers: Listen for user actions (like clicking "Delete") and call the appropriate Service and View methods.
+
+===================================================================================================================
+Key Technical Requirements :-
+
+OOP: All logic must be wrapped in ES6 Classes.
+
+
+Modules: Use import and export to connect files.
+
+
+CRUD: The system must support View, Add, Edit, and Delete for all four entities.
+
+=================================================================================================================
