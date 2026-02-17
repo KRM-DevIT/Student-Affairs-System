@@ -1,4 +1,4 @@
-export class CourseView {
+export class EmployeeView {
     constructor() {
         this.app = document.getElementById("app");
     }
@@ -7,13 +7,15 @@ export class CourseView {
     renderTable(config) 
     {
 
-        const courses = config.courses;
+        const employees = config.employees;
+        
         this.currentOnEdit = config.onEdit;     // Here All vars are seen for all class functions 
         this.currentOnDelete = config.onDelete; 
         this.currentOnSearch = config.onSearch;  
         this.currentOnSort = config.onSort;
 
         this.currentOnPageChange = config.onPageChange;
+        //  console.log("Current Page:", config.currentPage , "this = " , this);
          this.currentPage = config.currentPage;
          this.totalPages = config.totalPages;
         
@@ -37,7 +39,7 @@ export class CourseView {
         //@ End of pagination
 //========================================================================================
         this.tbody = document.createElement("tbody"); // View Property where we set the body of the table
-        this.PopulateRows(courses, this.currentOnEdit, this.currentOnDelete); // view function to add the rows 
+        this.PopulateRows(employees, this.currentOnEdit, this.currentOnDelete); // view function to add the rows 
         table.append(this.tbody); // rows to table
         this.app.append(title, controls, table , pagination); // we add all to the div
 }
@@ -45,7 +47,7 @@ export class CourseView {
 //-----------Creating Title---------------
 createTitle() {
   const title = document.createElement("h2");
-  title.textContent = "Course List";
+  title.textContent = "Employee List";
   return title;
 }
 
@@ -57,7 +59,7 @@ createControls(){
             controls.style.marginBottom = "15px";
             
             const addBtn = document.createElement("button");
-            addBtn.textContent = "Add New Course";
+            addBtn.textContent = "Add New Employee";
             addBtn.className = "btn-add";
             addBtn.style.float = "left";
 
@@ -87,8 +89,11 @@ createTable(){
     const headers = [
         {name:"ID" , key:"id"}, 
         {name:"Name" , key:"name"}, 
-        {name:"CourseCode" , key:"coursecode"}, 
-        {name:"Description" , key:"description"}, 
+        {name:"Email" , key:"email"}, 
+        {name:"Department" , key:"department"}, 
+        {name:"Position" , key:"position"}, 
+        {name:"hireDate",key:"hiredate"},
+        {name:"Salary",key:"salary"},
         {name:"Actions",key:"none"}
     ];
     
@@ -168,17 +173,20 @@ updateButtons() {
 
 //**************************************PoPulating the Rows******************************** */
 
-PopulateRows(courses, currentOnEdit, currentOnDelete) 
+PopulateRows(employees, currentOnEdit, currentOnDelete) 
 {
         this.tbody.innerHTML = "";
-        courses.forEach(s => {
+        employees.forEach(s => {
             const row = document.createElement("tr");
 
             [
                 s.id,
                 s.name,
-                s.coursecode,
-                s.description
+                s.email,
+                s.department,
+                s.position,
+                s.hireDate,
+                s.salary
             ].forEach(value => {
                 const td = document.createElement("td");
                 td.textContent = value;
@@ -208,16 +216,16 @@ PopulateRows(courses, currentOnEdit, currentOnDelete)
     }
 
 //! -----------------------------Refreshing the Table ==============================
-    updateTable(filteredCourses) 
+    updateTable(filteredEmployees) 
     {
         
-        this.PopulateRows(filteredCourses, this.currentOnEdit, this.currentOnDelete);
+        this.PopulateRows(filteredEmployees, this.currentOnEdit, this.currentOnDelete);
     }
 //----------------------------------------------------Render Form----------------------------------------------------
 
                              // ================= PURE DOM RENDER FORM =================
 
-    renderForm(course, onSave, onCancel) {
+    renderForm(employee, onSave, onCancel) {
 
         this.app.innerHTML = ""; // Clear existing content
 
@@ -227,24 +235,27 @@ PopulateRows(courses, currentOnEdit, currentOnDelete)
 
         // 2. Create Title
         const h2 = document.createElement("h2");
-        if(course){
-            h2.textContent = "Edit Course";
+        if(employee){
+            h2.textContent = "Edit Employee";
         } else {
-            h2.textContent = "Add New Course"; 
+            h2.textContent = "Add New Employee"; 
         }
         container.appendChild(h2);
 
         // 3. Create Form
         const form = document.createElement("form");
-        form.id = "courseForm";
+        form.id = "employeeForm";
 
         // 4. Create Inputs using a DOM Helper
         // Note: We are appending ELEMENTS
         //(label , type , id , value )
-        form.appendChild(this.createInputDOM("ID", "number", "id", course?.id));   
-        form.appendChild(this.createInputDOM("Name", "text", "name", course?.name));
-        form.appendChild(this.createInputDOM("Course Code", "text", "coursecode", course?.coursecode));
-        form.appendChild(this.createInputDOM("Description", "text", "description", course?.description));
+        form.appendChild(this.createInputDOM("ID", "number", "id", employee?.id));   
+        form.appendChild(this.createInputDOM("Name", "text", "name", employee?.name));
+        form.appendChild(this.createInputDOM("Email", "email", "email", employee?.email));
+        form.appendChild(this.createInputDOM("Department", "text", "department", employee?.department));
+        form.appendChild(this.createInputDOM("Position", "text", "position", employee?.position));
+        form.appendChild(this.createInputDOM("Hire Date", "date", "hireDate", employee?.hireDate));
+        form.appendChild(this.createInputDOM("Salary", "number", "salary", employee?.salary));
 
         // 5. Create Buttons
         const btnGroup = document.createElement("div");
@@ -253,7 +264,7 @@ PopulateRows(courses, currentOnEdit, currentOnDelete)
         const submitBtn = document.createElement("button");
         submitBtn.type = "submit";
         submitBtn.className = "btn-add";
-        submitBtn.textContent = course ? "Update" : "Save";
+        submitBtn.textContent = employee ? "Update" : "Save";
         
         //?? Why don't we add submitBtn.onclick = (submission event) ?? because its type = submit which by default trigger form.onsubmit
 
@@ -262,6 +273,7 @@ PopulateRows(courses, currentOnEdit, currentOnDelete)
         cancelBtn.className = "btn-delete";
         cancelBtn.textContent = "Cancel";
         
+        // Attach Cancel Event directly to the element (Cleaner!)
         cancelBtn.onclick = onCancel;
         // =======================
         btnGroup.append(submitBtn, cancelBtn);
@@ -272,8 +284,11 @@ PopulateRows(courses, currentOnEdit, currentOnDelete)
             e.preventDefault();
             const formData = {
                 name: document.getElementById("name").value.toLowerCase(),
-                coursecode: document.getElementById("coursecode").value.toLowerCase(),
-                description: document.getElementById("description").value.toLowerCase(),
+                email: document.getElementById("email").value.toLowerCase(),
+                department: document.getElementById("department").value.toLowerCase(),
+                position: document.getElementById("position").value.toLowerCase(),
+                hireDate: document.getElementById("hireDate").value,
+                salary: parseInt(document.getElementById("salary").value),
                 id: parseInt(document.getElementById("id").value) || null //- note :- NaN || null => null 
             };
             onSave(formData);
@@ -308,6 +323,27 @@ PopulateRows(courses, currentOnEdit, currentOnDelete)
         return wrapper;
     }
 
+// -===================================-- Helper: Creates a Checkbox with Label ---
 
+    createCheckboxDOM(labelText, id, isChecked) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "form-group";
+
+    const label = document.createElement("label");
+    label.style.display = "flex";
+    label.style.alignItems = "center";
+    label.style.gap = "10px";
+
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.id = id;
+    if (isChecked) input.checked = true;
+
+    label.appendChild(input);
+    label.appendChild(document.createTextNode(labelText));
+    wrapper.appendChild(label);
+
+    return wrapper;
+    }
 
 }

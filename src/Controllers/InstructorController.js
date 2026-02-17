@@ -1,10 +1,10 @@
-import { CourseService } from "../Services/CourseService.js";
-import { CourseView } from "../Views/CourseView.js";
+import { InstructorService } from "../Services/InstructorService.js";
+import { InstructorView } from "../Views/InstructorView.js";
 
-export class CourseController {
+export class InstructorController {
     constructor() {
-        this.service = new CourseService();
-        this.view = new CourseView();
+        this.service = new InstructorService();
+        this.view = new InstructorView();
         
         // Central State
         this.currentPage = 1;        
@@ -16,18 +16,18 @@ export class CourseController {
 
     async init() {
        
-        const coursesData = await this.service.paginate(
+        const instructorsData = await this.service.paginate(
             this.currentPage, 
             this.pageSize, 
             this.currentsortKey, 
             this.currentsortOrder
         );
-        const totalcourses = await this.service.getAllCourses();
-        this.totalPages = Math.ceil(totalcourses.length / this.pageSize);
+        const totalinstructors = await this.service.getAllInstructors();
+        this.totalPages = Math.ceil(totalinstructors.length / this.pageSize);
         console.log(this.totalPages);
 
         const tableConfig = {
-            courses: coursesData,
+            instructors: instructorsData,
             onEdit: this.onEdit.bind(this),
             onDelete: this.onDelete.bind(this),
             onSearch: this.onSearch.bind(this),
@@ -72,44 +72,44 @@ export class CourseController {
     async onSave(data) {
          if (data.id)
         {
-            await this.service.putCourse(data.id, data);
+            await this.service.putInstructor(data.id, data);
         }  
        
         else {
-            const courses = await this.service.getAllCourses();
+            const instructors = await this.service.getAllInstructors();
 
-            if(courses.length > 0 )
+            if(instructors.length > 0 )
             {
-                data.id = Math.max(...courses.map(s => s.id)) + 1; // ... spread operator to turn array into individual numbers
+                data.id = Math.max(...instructors.map(s => s.id)) + 1; // ... spread operator to turn array into individual numbers
             }
             else
             {
                 data.id = 1;
             }
  }
-        await this.service.postCourse(data); 
+        await this.service.postInstructor(data); 
         await this.init(); 
    
 }
     async onDelete(id)
     {
-        const confirmed = confirm("Are you sure you want to delete this course?");
+        const confirmed = confirm("Are you sure you want to delete this instructor?");
 
         if (!confirmed) return;
 
-        await this.service.deleteCourse(id);
+        await this.service.deleteInstructor(id);
 
         await this.init();
 
     }
 
-    async onEdit(course) {
+    async onEdit(instructor) {
 
         const onSaveCallback = this.onSave.bind(this);
 
         const init = this.init.bind(this);
 
-        this.view.renderForm(course, onSaveCallback, init);
+        this.view.renderForm(instructor, onSaveCallback, init);
 
     }
 }

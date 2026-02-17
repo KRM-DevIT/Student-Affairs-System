@@ -49,7 +49,7 @@
       "id": 8
     },
     {
-      "name": "mohamed ali ",
+      "name": "mohamed ali",
       "email": "kareemrmdn531@yahoo.com",
       "department": "windows forms",
       "age": 25,
@@ -82,7 +82,7 @@
     },
     {
       "name": "alaa nabil",
-      "email": "alollkareem@yahoo.com",
+      "email": "krm@yahoo.com",
       "department": "science",
       "age": 22,
       "enrolled": true,
@@ -111,6 +111,14 @@
       "age": 25,
       "enrolled": false,
       "id": 16
+    },
+    {
+      "name": "khaled mostafa",
+      "email": "khaled@student.com",
+      "department": "mathematics",
+      "age": 20,
+      "enrolled": true,
+      "id": 17
     }
   ],
   "courses": [
@@ -147,14 +155,396 @@
     {
       "name": "ai",
       "coursecode": "ai021",
-      "description": "ai and ml and dl",
+      "description": "introduction to artificial intelligence and machine learning concepts.",
       "id": 6
     },
     {
       "name": "advanced c#",
       "coursecode": "advc#",
-      "description": "course about c# and how advanced it is ",
+      "description": "course about c# and advanced language features.",
       "id": 7
+    },
+    {
+      "name": "operating systems",
+      "coursecode": "os301",
+      "description": "processes, threads, concurrency, and memory management.",
+      "id": 8
+    },
+    {
+      "name": "computer networks",
+      "coursecode": "cn201",
+      "description": "network layers, protocols, and socket programming.",
+      "id": 9
+    },
+    {
+      "name": "machine learning",
+      "coursecode": "ml301",
+      "description": "supervised and unsupervised learning methods and evaluation.",
+      "id": 10
+    },
+    {
+      "name": "human-computer interaction",
+      "coursecode": "hci101",
+      "description": "user-centered design, usability testing, and accessibility.",
+      "id": 11
+    },
+    {
+      "name": "mobile app development",
+      "coursecode": "mob201",
+      "description": "building native and cross-platform mobile applications.",
+      "id": 12
+    },
+    {
+      "name": "cloud computing",
+      "coursecode": "cloud301",
+      "description": "cloud services, deployments, and microservices architecture.",
+      "id": 13
+    },
+    {
+      "name": "computer graphics",
+      "coursecode": "cg201",
+      "description": "rendering, transformations, and basic graphics pipelines.",
+      "id": 14
+    },
+    {
+      "name": "cybersecurity fundamentals",
+      "coursecode": "cyb101",
+      "description": "security principles, cryptography basics, and risk management.",
+      "id": 15
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "mohamed hassan",
+      "email": "mohamed.hassan@university.com",
+      "department": "administration",
+      "position": "HR Manager",
+      "hireDate": "2018-06-15",
+      "salary": 45000,
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "nada yassin",
+      "email": "nada.yassin@university.com",
+      "department": "finance",
+      "position": "Accountant",
+      "hireDate": "2020-09-01",
+      "salary": 38000,
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "ahmed ali",
+      "email": "test@gmail.com",
+      "department": "devops",
+      "position": "Developer",
+      "hireDate": "2000-11-03",
+      "salary": 23000,
+      "active": true
+    },
+    {
+      "id": 4,
+      "name": "layla omar",
+      "email": "layla.omar@university.com",
+      "department": "it",
+      "position": "IT Support",
+      "hireDate": "2019-03-12",
+      "salary": 30000,
+      "active": true
+    },
+    {
+      "id": 5,
+      "name": "mona khaled",
+      "email": "mona.khaled@university.com",
+      "department": "registrar",
+      "position": "Registrar",
+      "hireDate": "2012-01-05",
+      "salary": 42000,
+      "active": true
+    },
+    {
+      "id": 6,
+      "name": "youssef adel",
+      "email": "youssef.adel@university.com",
+      "department": "library",
+      "position": "Librarian",
+      "hireDate": "2016-07-20",
+      "salary": 34000,
+      "active": true
+    },
+    {
+      "id": 7,
+      "name": "rana saad",
+      "email": "rana.saad@university.com",
+      "department": "labs",
+      "position": "Lab Technician",
+      "hireDate": "2017-11-30",
+      "salary": 29000,
+      "active": true
+    },
+    {
+      "id": 8,
+      "name": "maged farouk",
+      "email": "maged.farouk@university.com",
+      "department": "facilities",
+      "position": "Facilities Manager",
+      "hireDate": "2010-04-18",
+      "salary": 48000,
+      "active": true
+    },
+    {
+      "id": 9,
+      "name": "salma hamed",
+      "email": "salma.hamed@university.com",
+      "department": "security",
+      "position": "Security Officer",
+      "hireDate": "2014-08-02",
+      "salary": 27000,
+      "active": true
+    },
+    {
+      "id": 10,
+      "name": "karim saad",
+      "email": "karim.saad@university.com",
+      "department": "projects",
+      "position": "Project Coordinator",
+      "hireDate": "2021-02-15",
+      "salary": 36000,
+      "active": true
+    },
+    {
+      "id": 11,
+      "name": "dina mahmoud",
+      "email": "dina.mahmoud@university.com",
+      "department": "marketing",
+      "position": "Marketing Specialist",
+      "hireDate": "2019-09-09",
+      "salary": 32000,
+      "active": true
+    },
+    {
+      "id": 12,
+      "name": "osama alaa",
+      "email": "osama.alaa@university.com",
+      "department": "admissions",
+      "position": "Admissions Officer",
+      "hireDate": "2013-06-25",
+      "salary": 35000,
+      "active": true
+    },
+    {
+      "id": 13,
+      "name": "reem taha",
+      "email": "reem.taha@university.com",
+      "department": "research",
+      "position": "Research Assistant",
+      "hireDate": "2022-01-10",
+      "salary": 28000,
+      "active": true
+    },
+    {
+      "id": 14,
+      "name": "fady mohamed",
+      "email": "fady.mohamed@university.com",
+      "department": "clinical",
+      "position": "Clinical Coordinator",
+      "hireDate": "2011-12-01",
+      "salary": 41000,
+      "active": true
+    },
+    {
+      "id": 15,
+      "name": "amira hassan",
+      "email": "amira.hassan@university.com",
+      "department": "payroll",
+      "position": "Payroll Specialist",
+      "hireDate": "2015-05-14",
+      "salary": 33000,
+      "active": true
+    }
+  ],
+  "instructors": [
+    {
+      "id": 1,
+      "name": "dr. ali samir",
+      "email": "ali.samir@university.com",
+      "department": "computer science",
+      "title": "Associate Professor",
+      "office": "Bldg A, Room 312",
+      "phone": "+201234567890",
+      "courses": [1, 2],
+      "hiredDate": "2015-02-01",
+      "tenured": false
+    },
+    {
+      "id": 2,
+      "name": "prof. salma farouk",
+      "email": "salma.farouk@university.com",
+      "department": "software engineering",
+      "title": "Professor",
+      "office": "Bldg B, Room 210",
+      "phone": "+201098765432",
+      "courses": [5, 4],
+      "hiredDate": "2010-10-10",
+      "tenured": true
+    },
+    {
+      "id": 3,
+      "name": "dr. mahmoud reda",
+      "email": "mahmoud.reda@university.com",
+      "department": "computer science",
+      "title": "Lecturer",
+      "office": "Bldg A, Room 210",
+      "phone": "+201111111111",
+      "courses": [2, 8],
+      "hiredDate": "2016-07-01",
+      "tenured": false
+    },
+    {
+      "id": 4,
+      "name": "dr. sara khalil",
+      "email": "sara.khalil@university.com",
+      "department": "information systems",
+      "title": "Assistant Professor",
+      "office": "Bldg C, Room 101",
+      "phone": "+201222222222",
+      "courses": [3, 11],
+      "hiredDate": "2014-03-15",
+      "tenured": false
+    },
+    {
+      "id": 5,
+      "name": "prof. amr elgohary",
+      "email": "amr.elgohary@university.com",
+      "department": "software engineering",
+      "title": "Professor",
+      "office": "Bldg B, Room 305",
+      "phone": "+201333333333",
+      "courses": [5, 10],
+      "hiredDate": "2009-09-01",
+      "tenured": true
+    },
+    {
+      "id": 6,
+      "name": "dr. maya nabil",
+      "email": "maya.nabil@university.com",
+      "department": "mathematics",
+      "title": "Lecturer",
+      "office": "Bldg D, Room 12",
+      "phone": "+201444444444",
+      "courses": [17],
+      "hiredDate": "2017-01-20",
+      "tenured": false
+    },
+    {
+      "id": 7,
+      "name": "dr. walid samy",
+      "email": "walid.samy@university.com",
+      "department": "networks",
+      "title": "Assistant Professor",
+      "office": "Bldg E, Room 2",
+      "phone": "+201555555555",
+      "courses": [9],
+      "hiredDate": "2013-06-11",
+      "tenured": false
+    },
+    {
+      "id": 8,
+      "name": "dr. fatma sedky",
+      "email": "fatma.sedky@university.com",
+      "department": "ai",
+      "title": "Senior Lecturer",
+      "office": "Bldg F, Room 6",
+      "phone": "+201666666666",
+      "courses": [6, 10],
+      "hiredDate": "2012-11-05",
+      "tenured": true
+    },
+    {
+      "id": 9,
+      "name": "prof. omar adel",
+      "email": "omar.adel@university.com",
+      "department": "operating systems",
+      "title": "Professor",
+      "office": "Bldg G, Room 1",
+      "phone": "+201777777777",
+      "courses": [8, 14],
+      "hiredDate": "2008-05-22",
+      "tenured": true
+    },
+    {
+      "id": 10,
+      "name": "dr. salma yehia",
+      "email": "salma.yehia@university.com",
+      "department": "mobile",
+      "title": "Lecturer",
+      "office": "Bldg H, Room 8",
+      "phone": "+201888888888",
+      "courses": [12, 4],
+      "hiredDate": "2018-10-10",
+      "tenured": false
+    },
+    {
+      "id": 11,
+      "name": "dr. hanan morsi",
+      "email": "hanan.morsi@university.com",
+      "department": "hci",
+      "title": "Assistant Professor",
+      "office": "Bldg I, Room 14",
+      "phone": "+201999999999",
+      "courses": [11],
+      "hiredDate": "2016-04-04",
+      "tenured": false
+    },
+    {
+      "id": 12,
+      "name": "dr. yassin mostafa",
+      "email": "yassin.mostafa@university.com",
+      "department": "cloud",
+      "title": "Senior Lecturer",
+      "office": "Bldg J, Room 3",
+      "phone": "+201101010101",
+      "courses": [13],
+      "hiredDate": "2011-07-07",
+      "tenured": true
+    },
+    {
+      "id": 13,
+      "name": "dr. mirna kamel",
+      "email": "mirna.kamel@university.com",
+      "department": "graphics",
+      "title": "Lecturer",
+      "office": "Bldg K, Room 9",
+      "phone": "+201121212121",
+      "courses": [14],
+      "hiredDate": "2019-12-12",
+      "tenured": false
+    },
+    {
+      "id": 14,
+      "name": "dr. ibrahim saeed",
+      "email": "ibrahim.saeed@university.com",
+      "department": "cybersecurity",
+      "title": "Associate Professor",
+      "office": "Bldg L, Room 5",
+      "phone": "+201131313131",
+      "courses": [15],
+      "hiredDate": "2013-03-03",
+      "tenured": false
+    },
+    {
+      "id": 15,
+      "name": "dr. reham hussien",
+      "email": "reham.hussien@university.com",
+      "department": "software engineering",
+      "title": "Lecturer",
+      "office": "Bldg M, Room 7",
+      "phone": "+201141414141",
+      "courses": [5, 2],
+      "hiredDate": "2020-02-02",
+      "tenured": false
     }
   ]
 }
