@@ -21,40 +21,40 @@ The system manages Students, Courses, Instructors, and Employees with full CRUD 
 /students-affairs-system
 │
 ├── /css
-│   └── style.css            # Styles for Grid (Table), pagination, and forms [cite: 13, 119]
+│ └── style.css # Tables, pagination, and form styles
 │
 ├── /src
-│   ├── /models              # OOP Classes defining the data structure 
-│   │   ├── Student.js
-│   │   ├── Course.js
-│   │   ├── Instructor.js
-│   │   └── Employee.js
-│   │
-│   ├── /services            # Logic for API calls, search, sort, and pagination [cite: 110]
-│   │   ├── ApiService.js    # Base class for Fetch API logic [cite: 12, 110]
-│   │   ├── StudentService.js
-│   │   ├── CourseService.js
-│   │   ├── InstructorService.js
-│   │   └── EmployeeService.js
-│   │
-│   ├── /views               # DOM manipulation and rendering logic [cite: 106]
-│   │   ├── BaseView.js      # Shared logic for tables/forms
-│   │   ├── StudentView.js
-│   │   ├── CourseView.js
-│   │   ├── InstructorView.js
-│   │   └── EmployeeView.js
-│   │
-│   ├── /controllers         # Bridges views and services [cite: 111, 120]
-│   │   ├── StudentController.js
-│   │   ├── CourseController.js
-│   │   ├── InstructorController.js
-│   │   └── EmployeeController.js
-│   │
-│   └── main.js              # Entry point to initialize the application [cite: 111]
+│ ├── /models # Entity definitions (OOP)
+│ │ ├── Student.js
+│ │ ├── Course.js
+│ │ ├── Instructor.js
+│ │ └── Employee.js
+│ │
+│ ├── /services # API & data logic
+│ │ ├── ApiService.js # Base Fetch logic
+│ │ ├── StudentService.js
+│ │ ├── CourseService.js
+│ │ ├── InstructorService.js
+│ │ └── EmployeeService.js
+│ │
+│ ├── /views # DOM rendering & UI logic
+│ │ ├── BaseView.js
+│ │ ├── StudentView.js
+│ │ ├── CourseView.js
+│ │ ├── InstructorView.js
+│ │ └── EmployeeView.js
+│ │
+│ ├── /controllers # Application flow & event handling
+│ │ ├── StudentController.js
+│ │ ├── CourseController.js
+│ │ ├── InstructorController.js
+│ │ └── EmployeeController.js
+│ │
+│ └── main.js # Application entry point
 │
-├── db.json                  # Mock database for json-server [cite: 11, 123]
-├── index.html               # Main layout and navigation [cite: 119]
-└── package.json             # Scripts to run json-server [cite: 11]
+├── db.json # Mock database
+├── index.html # Main layout
+└── package.json # json-server scripts
 ===================================================================================================================
 
 
