@@ -1,4 +1,4 @@
-# 🎓 Student Affairs System
+<img width="556" height="388" alt="image" src="https://github.com/user-attachments/assets/4e680a78-096d-4d41-bedb-32595005e7b8" /># 🎓 Student Affairs System
 
 A **Vanilla JavaScript CRUD application** built using **ES6 Classes** and a clean **MVC-inspired architecture**.  
 The system manages Students, Courses, Instructors, and Employees with full CRUD operations, search, sorting, and pagination using a mock REST API.
@@ -52,11 +52,9 @@ The system manages Students, Courses, Instructors, and Employees with full CRUD 
 │ │
 │ └── main.js # Application entry point
 │
-├── db.json # Mock database
+├── db.json # Mock database (json-server)
 ├── index.html # Main layout
-└── package.json # json-server scripts
-===================================================================================================================
-
+└── package.json # Scripts & dependencies
 
 ---
 
