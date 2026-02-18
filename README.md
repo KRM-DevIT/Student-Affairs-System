@@ -96,29 +96,29 @@ Example endpoints:
 Follow the steps below to run the project locally.
 
 ### 1️⃣ Prerequisites
-Make sure you have the following installed:
-- **Node.js** (includes npm)
-
-You can verify installation by running:
-
-node -v
-npm -v
+    Make sure you have the following installed:
+    - **Node.js** (includes npm)
+    
+    You can verify installation by running:
+    
+    node -v
+    npm -v
 
 
 2️⃣ Install Project Dependencies
 
-From the project root directory, run:
-
-npm install
+    From the project root directory, run:
+    
+    npm install
 
 
 3️⃣ Install json-server (If Not Installed)
 
-json-server is required to run the mock backend.
-
-Install it globally:
-
-npm install -g json-server
+    json-server is required to run the mock backend.
+    
+    Install it globally:
+    
+    npm install -g json-server
 
 
 Or install it locally (recommended):
@@ -127,24 +127,24 @@ npm install json-server --save-dev
 
 4️⃣ Run the Backend Server
 
-Start the mock API using the predefined script:
-
-npm run backend
-
-
-The server will run on:
-
-http://localhost:3000
+    Start the mock API using the predefined script:
+    
+    npm run backend
+    
+    
+    The server will run on:
+    
+    http://localhost:3000
 
 5️⃣ Run the Frontend
 
-Open index.html using:
-
-Live Server (recommended), or
-
-Directly in the browser
-
-The application will now be fully functional.
+    Open index.html using:
+    
+    Live Server (recommended), or
+    
+    Directly in the browser
+    
+    The application will now be fully functional.
 
 
 ---------------------------------------
