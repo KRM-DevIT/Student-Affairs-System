@@ -41,15 +41,19 @@ export class EmployeeController {
     }
 
     async loadData() {
-        
-        const data = await this.service.getCombinedData(
+         
+        const result = await this.service.getCombinedData(
             this.currentKeyword,
             this.currentPage,
             this.pageSize,
             this.currentsortKey,
             this.currentsortOrder
         );
-        this.view.updateTable(data);
+        
+        // Recalculate total pages based on filtered results
+        this.totalPages = Math.ceil(result.totalCount / this.pageSize) || 1;
+        
+        this.view.updateTable(result.data, this.currentPage, this.totalPages);
     }
 
     async onSearch(keyword) {

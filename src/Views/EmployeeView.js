@@ -216,10 +216,19 @@ PopulateRows(employees, currentOnEdit, currentOnDelete)
     }
 
 //! -----------------------------Refreshing the Table ==============================
-    updateTable(filteredEmployees) 
+    updateTable(filteredEmployees, currentPage, totalPages) 
     {
+        this.currentPage = currentPage;
+        this.totalPages = totalPages;
         
         this.PopulateRows(filteredEmployees, this.currentOnEdit, this.currentOnDelete);
+        
+        // Update pagination UI
+        const pageInfo = document.getElementById("page-info");
+        if (pageInfo) {
+            pageInfo.textContent = ` Page ${this.currentPage} `;
+        }
+        this.updateButtons();
     }
 //----------------------------------------------------Render Form----------------------------------------------------
 

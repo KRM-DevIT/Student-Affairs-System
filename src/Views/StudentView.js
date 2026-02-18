@@ -214,10 +214,19 @@ PopulateRows(students, currentOnEdit, currentOnDelete)
     }
 
 //! -----------------------------Refreshing the Table ==============================
-    updateTable(filteredStudents) 
+    updateTable(filteredStudents, currentPage, totalPages) 
     {
+        this.currentPage = currentPage;
+        this.totalPages = totalPages;
         
         this.PopulateRows(filteredStudents, this.currentOnEdit, this.currentOnDelete);
+        
+        // Update pagination UI
+        const pageInfo = document.getElementById("page-info");
+        if (pageInfo) {
+            pageInfo.textContent = ` Page ${this.currentPage} `;
+        }
+        this.updateButtons();
     }
 //----------------------------------------------------Render Form----------------------------------------------------
 

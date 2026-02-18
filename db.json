@@ -265,14 +265,13 @@
       "active": true
     },
     {
-      "id": 6,
       "name": "youssef adel",
       "email": "youssef.adel@university.com",
       "department": "library",
-      "position": "Librarian",
+      "position": "librarian",
       "hireDate": "2016-07-20",
-      "salary": 34000,
-      "active": true
+      "salary": 33995,
+      "id": 6
     },
     {
       "id": 7,
@@ -363,6 +362,15 @@
       "hireDate": "2015-05-14",
       "salary": 33000,
       "active": true
+    },
+    {
+      "name": "ahmed gaber",
+      "email": "agaber@system.com",
+      "department": "it",
+      "position": "system administrator",
+      "hireDate": "2000-09-09",
+      "salary": 20000,
+      "id": 16
     }
   ],
   "instructors": [
@@ -374,7 +382,10 @@
       "title": "Associate Professor",
       "office": "Bldg A, Room 312",
       "phone": "+201234567890",
-      "courses": [1, 2],
+      "courses": [
+        1,
+        2
+      ],
       "hiredDate": "2015-02-01",
       "tenured": false
     },
@@ -386,7 +397,10 @@
       "title": "Professor",
       "office": "Bldg B, Room 210",
       "phone": "+201098765432",
-      "courses": [5, 4],
+      "courses": [
+        5,
+        4
+      ],
       "hiredDate": "2010-10-10",
       "tenured": true
     },
@@ -398,7 +412,10 @@
       "title": "Lecturer",
       "office": "Bldg A, Room 210",
       "phone": "+201111111111",
-      "courses": [2, 8],
+      "courses": [
+        2,
+        8
+      ],
       "hiredDate": "2016-07-01",
       "tenured": false
     },
@@ -410,7 +427,10 @@
       "title": "Assistant Professor",
       "office": "Bldg C, Room 101",
       "phone": "+201222222222",
-      "courses": [3, 11],
+      "courses": [
+        3,
+        11
+      ],
       "hiredDate": "2014-03-15",
       "tenured": false
     },
@@ -422,7 +442,10 @@
       "title": "Professor",
       "office": "Bldg B, Room 305",
       "phone": "+201333333333",
-      "courses": [5, 10],
+      "courses": [
+        5,
+        10
+      ],
       "hiredDate": "2009-09-01",
       "tenured": true
     },
@@ -434,7 +457,9 @@
       "title": "Lecturer",
       "office": "Bldg D, Room 12",
       "phone": "+201444444444",
-      "courses": [17],
+      "courses": [
+        17
+      ],
       "hiredDate": "2017-01-20",
       "tenured": false
     },
@@ -446,7 +471,9 @@
       "title": "Assistant Professor",
       "office": "Bldg E, Room 2",
       "phone": "+201555555555",
-      "courses": [9],
+      "courses": [
+        9
+      ],
       "hiredDate": "2013-06-11",
       "tenured": false
     },
@@ -458,7 +485,10 @@
       "title": "Senior Lecturer",
       "office": "Bldg F, Room 6",
       "phone": "+201666666666",
-      "courses": [6, 10],
+      "courses": [
+        6,
+        10
+      ],
       "hiredDate": "2012-11-05",
       "tenured": true
     },
@@ -470,7 +500,10 @@
       "title": "Professor",
       "office": "Bldg G, Room 1",
       "phone": "+201777777777",
-      "courses": [8, 14],
+      "courses": [
+        8,
+        14
+      ],
       "hiredDate": "2008-05-22",
       "tenured": true
     },
@@ -482,7 +515,10 @@
       "title": "Lecturer",
       "office": "Bldg H, Room 8",
       "phone": "+201888888888",
-      "courses": [12, 4],
+      "courses": [
+        12,
+        4
+      ],
       "hiredDate": "2018-10-10",
       "tenured": false
     },
@@ -494,7 +530,9 @@
       "title": "Assistant Professor",
       "office": "Bldg I, Room 14",
       "phone": "+201999999999",
-      "courses": [11],
+      "courses": [
+        11
+      ],
       "hiredDate": "2016-04-04",
       "tenured": false
     },
@@ -506,7 +544,9 @@
       "title": "Senior Lecturer",
       "office": "Bldg J, Room 3",
       "phone": "+201101010101",
-      "courses": [13],
+      "courses": [
+        13
+      ],
       "hiredDate": "2011-07-07",
       "tenured": true
     },
@@ -518,7 +558,9 @@
       "title": "Lecturer",
       "office": "Bldg K, Room 9",
       "phone": "+201121212121",
-      "courses": [14],
+      "courses": [
+        14
+      ],
       "hiredDate": "2019-12-12",
       "tenured": false
     },
@@ -530,7 +572,9 @@
       "title": "Associate Professor",
       "office": "Bldg L, Room 5",
       "phone": "+201131313131",
-      "courses": [15],
+      "courses": [
+        15
+      ],
       "hiredDate": "2013-03-03",
       "tenured": false
     },
@@ -542,7 +586,10 @@
       "title": "Lecturer",
       "office": "Bldg M, Room 7",
       "phone": "+201141414141",
-      "courses": [5, 2],
+      "courses": [
+        5,
+        2
+      ],
       "hiredDate": "2020-02-02",
       "tenured": false
     }

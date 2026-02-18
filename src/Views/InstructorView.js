@@ -216,10 +216,19 @@ PopulateRows(instructors, currentOnEdit, currentOnDelete)
     }
 
 //! -----------------------------Refreshing the Table ==============================
-    updateTable(filteredInstructors) 
+    updateTable(filteredInstructors, currentPage, totalPages) 
     {
+        this.currentPage = currentPage;
+        this.totalPages = totalPages;
         
         this.PopulateRows(filteredInstructors, this.currentOnEdit, this.currentOnDelete);
+        
+        // Update pagination UI
+        const pageInfo = document.getElementById("page-info");
+        if (pageInfo) {
+            pageInfo.textContent = ` Page ${this.currentPage} `;
+        }
+        this.updateButtons();
     }
 //----------------------------------------------------Render Form----------------------------------------------------
 

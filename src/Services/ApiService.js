@@ -181,12 +181,15 @@ export class ApiService  // This Class Talks to Json-Server
             if (!response.ok) 
                 throw new Error("Network response was not ok");
 
-            return await response.json();
+            const data = await response.json();
+            const totalCount = parseInt(response.headers.get('X-Total-Count')) || data.length;
+            
+            return { data, totalCount };
         } 
         
         catch (error) {
             console.error("Fetch error:", error);
-            return [];
+            return { data: [], totalCount: 0 };
         }
     }
 
