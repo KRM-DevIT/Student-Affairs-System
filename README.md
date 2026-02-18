@@ -100,15 +100,17 @@ Make sure you have the following installed:
 - **Node.js** (includes npm)
 
 You can verify installation by running:
-```bash
+
 node -v
 npm -v
+
 
 2️⃣ Install Project Dependencies
 
 From the project root directory, run:
 
 npm install
+
 
 3️⃣ Install json-server (If Not Installed)
 
@@ -144,7 +146,7 @@ Directly in the browser
 
 The application will now be fully functional.
 
-```
 
-💥 Create By Human 💚
+---------------------------------------
+💥 Created By a Human 💚
 ---------------------------------------
