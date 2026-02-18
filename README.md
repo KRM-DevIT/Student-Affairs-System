@@ -24,7 +24,7 @@ The Student Affairs System is an educational project designed to showcase best p
 ## 🏗️ Architecture Overview
 
 This project follows the **MVC (Model-View-Controller)** pattern combined with a **Service Layer** for clean separation of concerns:
-.
+```
 ├── /students-affairs-system
 ├── │
 ├── ├── /css
@@ -62,14 +62,4 @@ This project follows the **MVC (Model-View-Controller)** pattern combined with a
 ├── ├── db.json                  # Mock database for json-server [cite: 11, 123]
 ├── ├── index.html               # Main layout and navigation [cite: 119]
 ├── └── package.json             # Scripts to run json-server [cite: 11]
-├── ===================================================================================================================
-├── Models: Define the properties of each entity (e.g., a Student's ID and Name).
-├── Services: Handle all fetch() requests. This is where you append ?q=keyword for search, _sort for sorting, and _page for pagination.
-├── Views: Responsible for creating the HTML table rows and showing/hiding forms.
-├── Controllers: Listen for user actions (like clicking "Delete") and call the appropriate Service and View methods.
-├── ===================================================================================================================
-├── Key Technical Requirements :-
-├── OOP: All logic must be wrapped in ES6 Classes.
-├── Modules: Use import and export to connect files.
-├── CRUD: The system must support View, Add, Edit, and Delete for all four entities.
-└── =================================================================================================================
+```
