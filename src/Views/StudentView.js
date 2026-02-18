@@ -110,12 +110,12 @@ createTable(){
             th.style.cursor = "pointer";
             
             const arrowUp = document.createElement("span");
-            arrowUp.textContent = " ↑";
+            arrowUp.textContent = " ▲";
             arrowUp.style.color = "#666";
             arrowUp.style.fontSize = "12px";
             
             const arrowDown = document.createElement("span");
-            arrowDown.textContent = " ↓";
+            arrowDown.textContent = " ▼";
             arrowDown.style.color = "#666";
             arrowDown.style.fontSize = "12px";
             
