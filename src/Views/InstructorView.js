@@ -98,6 +98,8 @@ createTable(){
     ];
     
     this.defaultSort = "asc";
+    this.currentSortKey = "id";
+    this.sortArrows = {};
 
     headers.forEach(obj => {
         
@@ -106,9 +108,37 @@ createTable(){
         
         if(obj.key !== "none") 
         {
+            th.style.cursor = "pointer";
+            
+            const arrowUp = document.createElement("span");
+            arrowUp.textContent = " ▲";
+            arrowUp.style.color = "#666";
+            arrowUp.style.fontSize = "12px";
+            
+            const arrowDown = document.createElement("span");
+            arrowDown.textContent = " ▼";
+            arrowDown.style.color = "#666";
+            arrowDown.style.fontSize = "12px";
+            
+            th.appendChild(arrowUp);
+            th.appendChild(arrowDown);
+            
+            this.sortArrows[obj.key] = { up: arrowUp, down: arrowDown };
+            
+            if(obj.key === "id") {
+                arrowUp.style.color = "#fff";
+                arrowUp.style.fontWeight = "bold";
+            }
+            
             th.onclick = () => 
             {
-                this.defaultSort = this.defaultSort === "asc" ? "desc" : "asc"; // toggle
+                if(this.defaultSort === "asc") {
+                    this.defaultSort = "desc";
+                } else {
+                    this.defaultSort = "asc";
+                }
+                this.currentSortKey = obj.key;
+                this.updateSortArrows();
                 this.currentOnSort(obj.key, this.defaultSort);
             }
         }
@@ -169,6 +199,30 @@ createPaginationButtons()
 updateButtons() {
     document.getElementById("prev-btn").disabled = this.currentPage <= 1;
     document.getElementById("next-btn").disabled = this.currentPage >= this.totalPages;
+}
+
+updateSortArrows() {
+    for(const key in this.sortArrows) {
+        const arrows = this.sortArrows[key];
+        if(key === this.currentSortKey) {
+            if(this.defaultSort === "asc") {
+                arrows.up.style.color = "#fff";
+                arrows.up.style.fontWeight = "bold";
+                arrows.down.style.color = "#666";
+                arrows.down.style.fontWeight = "normal";
+            } else {
+                arrows.up.style.color = "#666";
+                arrows.up.style.fontWeight = "normal";
+                arrows.down.style.color = "#fff";
+                arrows.down.style.fontWeight = "bold";
+            }
+        } else {
+            arrows.up.style.color = "#666";
+            arrows.up.style.fontWeight = "normal";
+            arrows.down.style.color = "#666";
+            arrows.down.style.fontWeight = "normal";
+        }
+    }
 }
 
 //**************************************PoPulating the Rows******************************** */
